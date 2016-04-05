@@ -1,8 +1,17 @@
-//some practice with linked lists
+/*
+some practice with linked lists
+*/
+
+//list node constructor 
+function listNode(value){
+	this.val = value;
+	this.next = null;
+}
 
 function linkedList(){
 	this.head = null;
 
+	//length of list
 	this.length = function(){
 		var count = 0;
 		var runner = this.head;
@@ -14,10 +23,20 @@ function linkedList(){
 	}
 }
 
-function listNode(value){
-	this.val = value;
-	this.next = null;
+//reverses a linked list
+function reverseLL(head){
+	var next, curr = head, prev = null;
+	while(curr){
+		next = curr.next;
+		curr.next = prev;
+		prev = curr;
+		curr = next;
+	}
+	return prev;
 }
+
+
+
 
 var node1 = new listNode("one");
 
