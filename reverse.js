@@ -15,7 +15,6 @@ function revString (str){
 }
 
 
-
 // reverse an array
 
 function revArray (arr){
@@ -26,4 +25,21 @@ function revArray (arr){
 	}
 	console.log(arr);
 }
+
+
+// reverse an array by creating a new array
+
+function revArray2 (arr){
+	var newArr = [];
+	for (var i = arr.length -1; i >= 0; i--){
+		newArr.push(arr[i]);
+	}
+	console.log(newArr);
+}
+
+
+
+
+
+
 
