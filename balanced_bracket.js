@@ -5,6 +5,11 @@
 
 
 function balancedBracket(str){
+	// fast fail if no string entered
+	if(!str){
+		return false
+	}
+
 	var right_to_left = {
 		")" : "(",
 		"]" : "[",
@@ -29,6 +34,7 @@ function balancedBracket(str){
 	
 	//if any remaining characters left return false
 	if(stack.length > 0){
+		console.log(stack)
 			return false
 		}
 
@@ -36,6 +42,6 @@ function balancedBracket(str){
 	return true
 }
 
-console.log(balancedBracket("{}[()]((){})[][{}]"))
-
+console.log(balancedBracket("({}[()]((){})[][{}])"))
+console.log(balancedBracket())
 
