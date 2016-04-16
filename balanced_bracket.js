@@ -2,14 +2,14 @@
 
 // var left_brackets = ["(", "[", "{"];
 // var right_brackets = [")", "]", "}"]
-var right_to_left = {
+
+
+function balancedBracket(str){
+	var right_to_left = {
 		")" : "(",
 		"]" : "[",
 		"}" : "{"
 	}
-
-
-function balancedBracket(str){
 
 	var stack = [];
 
@@ -36,6 +36,6 @@ function balancedBracket(str){
 	return true
 }
 
-console.log(balancedBracket("{}[()]((){})"))
+console.log(balancedBracket("{}[()]((){})[][{}]"))
 
 
