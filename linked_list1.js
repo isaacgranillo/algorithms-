@@ -35,6 +35,18 @@ function reverseLL(head){
 	return prev;
 }
 
+function recRevLL(head){
+	if (!head.next){
+		return head;
+	}
+	else{
+		var new_head = recRevLL(head.next);
+	}
+	head.next.next = head;
+	head.next = null;
+	return new_head;
+}
+
 
 
 
