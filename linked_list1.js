@@ -47,8 +47,58 @@ function recRevLL(head){
 	return new_head;
 }
 
+// checks if a linked list has a loop 
+function listHasLoop(head){
+	var runner = head;
+	var walker = head;
+
+	while(runner){
+		runner = runner.next
+		if(!runner){
+			return false;
+		}
+		runner = runner.next;
+
+		walker = walker.next
+		if(runner === walker){
+			return true
+		}
+	}
+	return false
+}
+
+// checks the length of a loop in a linked list
+function listLoopLength(head){
+	var runner = head;
+	var walker = head;
+	var count = 0;
+	var inc_count = false;
 
 
+	while(runner){
+		runner = runner.next;
+		if(!runner){
+			return false;
+		}
+		runner = runner.next
+
+		walker = walker.next;
+		if(runner === walker){
+			if(count === 0){
+				inc_count = true;
+			}
+			else{
+				return count;
+			}
+		}
+		if(inc_count){
+			count++;
+		}
+	}
+	return false
+}
+
+//
 
 var node1 = new listNode("one");
 
